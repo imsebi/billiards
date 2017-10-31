@@ -1,2 +1,18 @@
-<body style="background-color:green;">
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+<body>
+<header>
+    <h1>
+    The Amazing POOL APP!!
+    </h1>
+    <test>
+        this is testing font
+    </test>
+</header>
+<img src="{% static "images/background.jpg" %}" alt="My image"/>
 </body>
+</html>

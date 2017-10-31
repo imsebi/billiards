@@ -1,5 +1,9 @@
-<body style="background-color:green;">
-{% load i18n %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+<body>
+<!-- {% load i18n %} -->
 
 {% block content %}
 <form method="post" action=".">
