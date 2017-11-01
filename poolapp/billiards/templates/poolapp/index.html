@@ -3,7 +3,11 @@
 
 <html>
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+<head>
+   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" /> 
+</head>
 
+<<<<<<< HEAD:poolapp/billiards/templates/poolapp/index.html
 <body>
 <header>
     <h1>
@@ -20,5 +24,22 @@
     </test>
 </header>
 <img src="{% static "images/background.jpg" %}" alt="My image"/>
+=======
+<body>   
+    <nav>
+        <ul>
+          <li><a href="#home">Pool App</a></li>
+          <li><a href="#news">LeaderBoard</a></li>
+          <li><a href="#contact"></a></li>
+          <li style="float:right"><a class="active" href="#about">Log Out</a></li>
+        </ul>
+    </nav>
+    <main id="bg" style="background-image: url('{% static "images/pooltable.png"%}')";>
+        <content>
+
+        </content>
+        <!-- <img src="pooltable.png" alt="TopDown - Pooltable"> -->
+    </main>
+>>>>>>> 4b30d3fcaa7e6bc7eac22b4ac7217ea22c99c106:poolapp/poolapp/templates/poolapp/index.html
 </body>
 </html>
