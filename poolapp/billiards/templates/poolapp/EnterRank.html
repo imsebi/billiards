@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" /> 
+</head>
+
+
+
+
+
+
+<body>   
+<header>
+    <h1>
+    The Amazing POOL APP!!
+    </h1>
+</header>
+    <nav>
+        <ul>
+          <li><a href="#home">Pool App</a></li>
+          <li><a href="#news">LeaderBoard</a></li>
+          <li><a href="#contact"></a></li>
+          <li style="float:right"><a class="active" href="#about">Log Out</a></li>
+        </ul>
+    </nav>
+    <main id="bg" style="background-image: url('{% static "images/pooltable.png"%}')";>
+        <content>
+<ul>
+  <li>Username: {{ user.username }}</li>
+  <li>Rank: {{ user.rank }}</li>
+
+
+
+
+</ul>
+<form method="post">
+  {% csrf_token %}
+  {{ user_form.as_p }}
+  <button type="submit">Save changes</button>
+</form>
+        </content>
+        <!-- <img src="pooltable.png" alt="TopDown - Pooltable"> -->
+    </main>
+
+</body>
+</html>

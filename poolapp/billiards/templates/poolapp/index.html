@@ -5,7 +5,21 @@
 <head>
    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" /> 
 </head>
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+>>>>>>> e5d8e17b9853a0ea48f16b38af8ed88c59e2d796
 <body>   
+<header>
+    <h1>
+    The Amazing POOL APP!!
+    </h1>
+</header>
     <nav>
         <ul class="navi">
           <li style="float:left"><a href="#home">Pool App</a></li>
@@ -15,12 +29,32 @@
     </nav>
     <main>
         <content>
+<<<<<<< HEAD
             <ul class="table">
               <li style="padding-right:250px">Username: {{ user.username }}</li>
               <li>Rank: {{ user.profile.rank }}</li>
               <li style="padding-left:250px">Challenger: {{ user.profile.challenger }}</li>
             </ul>
+=======
+<ul>
+  <li>Username: {{ user.username }}</li>
+  <li>Rank: {{ user.profile.rank }}</li>
+
+
+
+
+</ul>
+<form method="post">
+  {% csrf_token %}
+  {{ user_form.as_p }}
+  <button type="submit">Save changes</button>
+</form>
+>>>>>>> e5d8e17b9853a0ea48f16b38af8ed88c59e2d796
         </content>
     </main>
+<<<<<<< HEAD
+=======
+
+>>>>>>> e5d8e17b9853a0ea48f16b38af8ed88c59e2d796
 </body>
 </html>
