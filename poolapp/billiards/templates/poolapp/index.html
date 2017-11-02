@@ -6,21 +6,17 @@
    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" /> 
 </head>
 
-<<<<<<< HEAD:poolapp/billiards/templates/poolapp/index.html
 
-<body>
+
+
+
+
+<body>   
 <header>
     <h1>
     The Amazing POOL APP!!
     </h1>
-
-
-
 </header>
-<img src="{% static "images/background.jpg" %}" alt="My image"/>
-
-=======
-<body>   
     <nav>
         <ul>
           <li><a href="#home">Pool App</a></li>
@@ -34,11 +30,19 @@
 <ul>
   <li>Username: {{ user.username }}</li>
   <li>Rank: {{ user.profile.rank }}</li>
-  <li>Challenger: {{ user.profile.challenger }}</li>
+
+
+
+
 </ul>
+<form method="post">
+  {% csrf_token %}
+  {{ user_form.as_p }}
+  <button type="submit">Save changes</button>
+</form>
         </content>
         <!-- <img src="pooltable.png" alt="TopDown - Pooltable"> -->
     </main>
->>>>>>> 4b30d3fcaa7e6bc7eac22b4ac7217ea22c99c106:poolapp/poolapp/templates/poolapp/index.html
+
 </body>
 </html>
