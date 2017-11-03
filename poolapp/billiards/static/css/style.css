@@ -1,14 +1,9 @@
 /* StyleSheet */
 
-body {
-    background-color: green;
-    cent
 head {
     margin-top: 0px;
 }
 
-test {
-    color: red;
 body {   
     margin: 0;
     width: 100%;
@@ -16,8 +11,6 @@ body {
     background-color: #000;
 }
 
-img {
-    stuff;
 main { 
    width: 70%; 
    height: 700px;
@@ -59,6 +52,7 @@ ul {
 
 li {
     float: left;
+    color: white;
 }
 
 li a {
