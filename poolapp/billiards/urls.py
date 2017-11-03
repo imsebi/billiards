@@ -20,4 +20,6 @@ from . import views
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^EnterRank/', views.update_profile, name='update_profile'),
+    url(r'^Challenge/', views.update_challenger, name='update_challenger'),
+    url(r'^Outcome/', views.update_challenger, name='update_outcome'),
 ]

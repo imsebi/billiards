@@ -8,8 +8,8 @@ from django.db.models.signals import post_save
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     rank = models.TextField(max_length=2, blank=False)
-    challenger = models.CharField(max_length=30, blank=True)
-    
+    challenger = models.CharField(max_length=30, blank=False)
+
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
