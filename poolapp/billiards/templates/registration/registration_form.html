@@ -1,12 +1,25 @@
-<body style="background-color:green;">
-{% load i18n %}
+{% load static %}
 
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+<body>
+    <nav>
+        <ul>
+          <li style="float:left"><a href="#home">Pool App</a></li>
+          <li><a href="#news">LeaderBoard</a></li>
+          <li style="float:right"><a href="#about">Log Out</a></li>
+        </ul>
+    </nav>
+
+{% load i18n %}
+<main>
 {% block content %}
-<form method="post" action=".">
+<form class="regform" method="post" action=".">
   {% csrf_token %}
   {{ form.as_p }}
 
-  <input type="submit" value="{% trans 'Register' %}" />
+  <input class="regbtn" type="submit" value="{% trans 'Register' %}" />
 </form>
+</main>
 </body>
 {% endblock %}
