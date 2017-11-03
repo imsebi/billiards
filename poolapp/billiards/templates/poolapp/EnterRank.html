@@ -5,12 +5,6 @@
 <head>
    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" /> 
 </head>
-
-
-
-
-
-
 <body>   
 <header>
     <h1>
@@ -29,7 +23,7 @@
         <content>
 <ul>
   <li>Username: {{ user.username }}</li>
-  <li>Rank: {{ user.rank }}</li>
+  <li>Rank: {{ user.profile.rank }}</li>
 
 
 

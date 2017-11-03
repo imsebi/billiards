@@ -1,4 +1,6 @@
 {% load static %}
+{% load render_table from django_tables2 %}
+
 <!DOCTYPE html>
 
 <html>
@@ -30,16 +32,8 @@
 <ul>
   <li>Username: {{ user.username }}</li>
   <li>Rank: {{ user.profile.rank }}</li>
-
-
-
-
 </ul>
-<form method="post">
-  {% csrf_token %}
-  {{ user_form.as_p }}
-  <button type="submit">Save changes</button>
-</form>
+{% render_table table %}
         </content>
         <!-- <img src="pooltable.png" alt="TopDown - Pooltable"> -->
     </main>
