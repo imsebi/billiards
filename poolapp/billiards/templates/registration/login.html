@@ -3,14 +3,24 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
 
 <body>
+    <nav>
+        <ul>
+          <li style="float:left"><a href="#home">Pool App</a></li>
+          <li><a href="#news">LeaderBoard</a></li>
+          <li style="float:right"><a href="#about">Log Out</a></li>
+        </ul>
+    </nav>
 <!-- {% load i18n %} -->
+<main>
 
 {% block content %}
-<form method="post" action=".">
+<form class="logform" method="post" action=".">
   {% csrf_token %}
   {{ form.as_p }}
 
-  <input type="submit" value="{% trans 'Login' %}" />
+  <input class="logbtn" type="submit" value="{% trans 'Login' %}" />
 </form>
+
+</main>
 </body>
 {% endblock %}
